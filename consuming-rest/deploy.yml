@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rest
+  name: rest
+  namespace: se-tap
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rest
+    spec:
+      containers:
+      - image: cpingwang/restapp
+        name: restapp
+        resources: {}
+status: {}

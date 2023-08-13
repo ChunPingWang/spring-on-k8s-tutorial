@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rest
+  name: rest
+  namespace: se-tap
+spec:
+  ports:
+  - port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: rest
+  type: LoadBalancer
+status:
+  loadBalancer: {}
